@@ -1,3 +1,4 @@
+//在vc上可以顺利运行，将scanf设置完成即可
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
@@ -72,12 +73,12 @@ int main()
 	unsigned char *result;
 	printf("加密解密演示!\n");
 	printf("请输入密钥：");
-	scanf("%s", key_data);
+	scanf_s("%s", key_data);
 	for (m = 0; m<256; m++)
 		if (key_data[m] != '\0') key_len++;
 
 	printf("请输入明文：");
-	scanf("%s", buf_data);
+	scanf_s("%s", buf_data);
 	for (n = 0; n<1024; n++)
 		if (buf_data[n] != '\0') buf_len++;
 
